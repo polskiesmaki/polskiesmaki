@@ -1,57 +1,60 @@
-# Hi, ich bin Dennis Glowacki👋
+# Hi, ich bin Dennis 👋
 
-Robotics Engineer / Embedded Systems Enthusiast mit Interesse an autonomem Verhalten, Sensorik, Regelung, ROS, Simulation und intelligenten Systemen.
+Robotics Engineer mit Fokus auf Robotik-Software, Teleoperation, humanoide Systeme und Simulation.
 
-Ich teile hier öffentlich nur allgemeine Konzepte, Lernmaterialien, Architekturideen und persönliche Projekte – ohne vertrauliche Produktdetails, Kundendaten oder geschützte IP.
+Ich baue hier ein öffentliches Portfolio auf, das meine Interessen in Robotik, Kontroll- und Interaktionssystemen sichtbar macht – ohne vertrauliche Firmen- oder Produktinformationen zu veröffentlichen.
 
-## Fokusbereiche
-- Robotik & autonome Systeme
+## Was mich interessiert
+- Teleoperation & Remote Control für Roboter
+- Humanoide Roboter & Locomotion
+- Robotik-Simulation und digitale Zwillinge
+- Perception, State Estimation und Sensorik
+- Mensch-Roboter-Interaktion
+- Robot Learning und autonome Verhaltenslogik
+- Embeddedsysteme und robuste Robotik-Architekturen
+
+## Meine Schwerpunkte
+- Robotik-Software & Frameworks
 - ROS / ROS 2
-- Kinematik & Bewegungsplanung
-- Sensorfusion & Perception
-- Embedded Systems / microcontroller-basierte Anwendungen
-- Simulation & Testumgebungen
-- Machine Learning für Robotik
-- Automatisierung & Prototyping
+- Simulation in Isaac Lab / Isaac Sim
+- Teleop-Systeme und Benutzerschnittstellen
+- Bewegungsplanung, Regelung und Systemintegration
+- Prototyping von robotischen Interaktions- und Testumgebungen
 
-## Was ich hier zeige
-- Architekturüberlegungen zu Robotik-Stacks
-- Lernprojekte mit realistischen, aber abstrahierten Beispielen
-- Technische Demos und kleine Experimentierprojekte
-- Beiträge zu Robotik- und Embedded-Topics
-- Publizierbare Ideen, die keine geschützten Unternehmensinhalte enthalten
+## Was ich hier öffentlich zeigen möchte
+- technische Konzepte rund um Teleoperation und Robotik-Interaktion
+- Lern- und Prototyping-Arbeiten in Simulation und Robotik
+- Architekturideen für autonome und halbautonome Systeme
+- praktische Einblicke in humanoide Robotik und Lauf-/Interaktionssysteme
+- allgemeine, nicht-proprietäre Erkenntnisse aus dem Robotik-Engineering
 
-## Tech Stack
+## Interessante Themen aus meinem Bereich
+- Teleoperation als Brücke zwischen Mensch und Roboter
+- Shared autonomy und intuitive Bedienkonzepte
+- Robotersteuerung mit visueller Rückkopplung und Sensorfusion
+- Humanoid locomotion und stabilisierte Bewegungsabläufe
+- Simulation als Testumgebung für reale Robotik-Experimente
+- Übergang von Prototyp zu robusten, wiederverwendbaren Robotik-Stacks
+
+## Stack
 - Python
 - C++
 - ROS / ROS 2
 - Linux
 - Git
+- Isaac Lab / Isaac Sim
 - OpenCV
 - NumPy / SciPy
-- Isaac Sim/Lab / Simulation
-- Embedded Tools / MCU-Umgebungen
-- ML / Vision-Workflows
+- Embedded & MCU-basierte Entwicklungsumgebungen
 
-## Aktuelle Interessen
-- Robotic perception and scene understanding
-- Path planning and motion control
-- Real-world deployment of robotic systems
-- Practical AI for robotics
-- Sensor-driven autonomy
+## Meine Herangehensweise
+Ich glaube, gute Robotik entsteht dort, wo Hardwareverständnis, Softwarearchitektur und echte Systemkenntnis zusammenkommen. Mein Fokus liegt auf verständlichen, robusten und praxisnahen Lösungen – insbesondere dort, wo Menschen mit Robotern interagieren oder Systeme in simulierten und realen Umgebungen getestet werden.
 
-## Mein Ansatz
-Ich glaube, gute Robotik entsteht dort, wo Hardwareverständnis, Software-Design und echte Systemkenntnis zusammenkommen. Meine Arbeit fokussiert sich auf verständliche, robuste und nachvollziehbare Lösungen – mit klaren Architekturen und sauberem Engineering.
-
-## Meine öffentliche Mission
-Ich möchte:
-- Robotik-Themen verständlich und praxisnah zeigen
-- meine Lern- und Entwicklungsreise dokumentieren
-- technische Ideen ohne NDA-Verletzung teilen
-- mich mit anderen Interessierten und Entwicklern austauschen
+## Ziel
+Ich möchte meine Robotik- und Teleoperation-Interessen öffentlich sichtbar machen, ohne sensitive oder geschützte Inhalte zu teilen. Dafür nutze ich allgemeine, nachvollziehbare Projekte, technische Konzepte und Lernreisen aus dem Bereich Robotik.
 
 ## Kontakt
 - GitHub: https://github.com/polskiesmaki
 - E-Mail: dennis.glowacki@gmx.de
 
-> Hinweis: Alle Inhalte hier sind bewusst auf allgemeine, nicht-proprietäre Robotik-Themen fokussiert. Keine vertraulichen Produkt-, Kunden- oder Firmendaten werden veröffentlicht.
+> Hinweis: Die Inhalte hier sind bewusst auf allgemeine, nicht-proprietäre Robotik-Themen fokussiert. Keine vertraulichen Produkt-, Kunden- oder Firmendaten werden veröffentlicht.
