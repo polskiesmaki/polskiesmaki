@@ -1,11 +1,8 @@
 # Hi, ich bin Dennis 👋
 
-**Robotics Engineer – Teleoperation · Humanoide Roboter · Simulation & Digital Twins**
+**Automation & Robotics Engineer – Systemintegration · Humanoide Robotik · Simulation & Logistikautomation**
 
-Ich entwickle Software, die Menschen und Roboter verbindet: von der VR-Teleoperation eines
-zweiarmigen Humanoiden über Inverse Kinematik und Perception bis zum digitalen Zwilling
-in Isaac Sim. Am liebsten arbeite ich direkt an der Grenze zwischen Simulation und echter
-Hardware.
+Ich komme aus der praktischen Logistik- und Materialflussautomatisierung und arbeite an der Schnittstelle zwischen IT-Systemen, Simulation und echter Roboter-Hardware. Mein Fokus liegt darauf, bestehende Frameworks (ROS 2, NVIDIA Isaac Sim / Isaac Lab, Pinocchio, Unity) pragmatisch zu verbinden, Pipelines aufzubauen und Bewegungsabläufe sicher vom digitalen Zwilling auf reale Systeme zu bringen.
 
 ---
 
@@ -13,94 +10,58 @@ Hardware.
 
 | | |
 |---|---|
-| **Rolle** | Robotics Engineer (Software, Integration, Teleoperation) |
-| **Plattform-Erfahrung** | Humanoider Industrieroboter: 2 × 7-DOF-Arme, Dexterous Hands, Kopf-Stereo, RGB-D, Kraft-Momenten-Sensoren am Handgelenk |
-| **Schwerpunkte** | VR-Teleoperation · Dual-Arm-IK · Bin- & Regal-Picking · Isaac Sim / USD · ROS 2 |
-| **Arbeitsweise** | Erst offline messen, dann am echten Roboter testen. Sicherheit, Nachvollziehbarkeit, dokumentierte Evidenz |
+| **Hintergrund** | Logistikautomation (MFR/MFC, Prozessdaten/SQL) & angewandte Robotik-Integration |
+| **Plattform-Praxis** | Humanoider Roboter (2 × 7-DOF-Arme, Dexterous Hands, Stereo-/RGB-D-Kameras) |
+| **Schwerpunkte** | VR-Teleoperation · Pick-and-Place-Pipelines · Isaac Sim / Isaac Lab · ROS 2 (Python) |
+| **Arbeitsweise** | Pragmatisches Rapid Prototyping (inkl. AI-assisted Development), erst in der Simulation und offline testen, dann schrittweise auf der Hardware validieren |
 | **Sprachen** | Deutsch · Polnisch · Englisch |
 
 ---
 
-## 🗺️ Robotik-Themen, an denen ich gearbeitet habe
+## 🗺️ Themen & Projekte, an denen ich arbeite
 
-### 🥽 Teleoperation & Mensch-Roboter-Schnittstellen
-- **VR-Teleoperation (Meta Quest 3, Unity → ROS 2):** Beide Arme werden in Echtzeit über die Controller gesteuert, das Stereo-Kamerabild des Roboters läuft zurück ins Headset.
-- **Motion-Capture-Teleoperation:** Retargeting menschlicher Bewegungen auf Roboter-Gelenkziele.
-- **Retargeting-Engineering:** Spiegelsymmetrie zwischen linkem und rechtem Arm, Korrektur des Controller-Koordinatensystems, Kalibrier-Gesten, Analyse von Asymmetrien in aufgezeichneten Daten.
-- **Hand- und Greif-Teleoperation:** Finger- und Daumensteuerung einer Dexterous Hand.
-- **Kopfsteuerung:** Der Kopf folgt dem Headset, oder die Kamera wird bei Aufnahmen fixiert.
-- **Bedienoberflächen:** Web-UIs für Operator, Aufnahme und Training, Sprachausgabe als Statushinweis (Voice Cues/TTS).
+### 🥽 Teleoperation & Steuerung
+- **VR-Teleoperation (Meta Quest 3, Unity → ROS 2):** Ansteuerung beider Roboterarme über VR-Controller inklusive Kamera-Stream zurück ins Headset.
+- **Retargeting & Mapping:** Anpassung und Kalibrierung der Koordinatensysteme zwischen VR-Setup und Roboter, damit linker und rechter Arm symmetrisch und sauber reagieren.
+- **Hand-Ansteuerung:** Einbindung von Greif- und Schließsequenzen für mehrgliedrige Roboterhände (Dexterous Hands) per Trigger und Hand-Tracking.
+- **Operator-Tools:** Web-Oberflächen und einfache Skripte zum Starten, Überwachen und Steuern von Abläufen.
 
-### 🦾 Kinematik, IK & Bewegung
-- **Streaming-IK für zwei redundante 7-DOF-Arme (Pinocchio):** Damped Least Squares, Nullraum-Steuerung, Warm-Start.
-- **Umgang mit Singularitäten:** Begrenzung der Reichweite, Mindestbeugung des Ellbogens als Active-Set-Constraint, Wahl der Neutralhaltung abseits der Gimbal-Lock-Stellung des Handgelenks.
-- **Trajektorien & sichere Ausführung:** Quintische Profile, Abstand zu Gelenkgrenzen, Kollisionsprüfung vor der Ausführung, Offline-Planung mit Dry-Run.
-- **Gravitationskompensation / Lead-Through:** Nutzlast-Identifikation über die Kraft-Momenten-Sensoren am Handgelenk.
+### 🦾 Bewegungsplanung & Kinematik-Integration
+- **Dual-Arm-IK in Python (Pinocchio):** Einsatz und Anpassung eines Pinocchio-basierten IK-Solvers als schlanke Alternative zu MoveIt 2 für flüssiges Streaming.
+- **Praktisches Limit- & Singularitäts-Handling:** Begrenzung von Schrittweiten und Arbeitsraum-Radien, damit die Arme im Betrieb nicht in gestreckte Singularitäten oder Gelenklimits laufen.
+- **Sichere Ausführung auf der Hardware:** Offline-Vorabprüfung von Pfaden, schrittweise Verifikation der Gelenkpositionen und klare Trennung zwischen Software-Freigabe und physischem Not-Halt.
 
-### 👁️ Perception & Sensorik
-- **Objekterkennung:** YOLOv8 und Open-Vocabulary-Detektion (YOLO-World), Produkt-Wiedererkennung über Embeddings.
-- **3D aus Stereo und RGB-D:** Greifpunkte im Roboter-Basisframe.
-- **Kamera-Extrinsik über die kinematische Kette:** Der Kamerapose-Pfad wird mit den gemessenen Gelenkwinkeln berechnet, mit Selbsttest gegen das Robotermodell.
-- **AprilTag-Lokalisierung:** Position des Roboters relativ zur Arbeitszelle.
-- **Abgleich von URDF, USD und realer Hardware:** Gelenk-Origins, Montage-Transformationen, Massen.
+### 📦 Pick-and-Place & Logistik-Use-Cases
+- **Regal-Picking auf realer Hardware:** Durchgängiger Ablauf von der Zielvorgabe über kollisionsgeprüfte Waypoints bis zum Greifen und Ablegen – Schritt für Schritt von ~147 s auf ~56 s Zykluszeit optimiert.
+- **Kisten- & Förderband-Szenarien (Sim):** Aufbau virtueller Versandanlagen- und Bin-Picking-Szenarien zur Erprobung von Greif- und Hebevorgängen.
 
-### 📦 Greifen, Bin- & Regal-Picking
-- **Regal-Picking-Pipeline:** Erkennung → Greifziel → IK-Plan → Ausführung → Verifikation.
-- **Erklärbare Greifmodelle aus Demonstrationen:** Explizites geometrisches Modell statt Black-Box-Policy.
-- **Bin-Picking-Zelle als digitaler Zwilling:** Kiste und Produkte in USD, Analyse der Erreichbarkeit vor jedem RL- oder IL-Schritt.
-- **Ansteuerung einer Dexterous Hand:** Greif- und Öffnungssequenzen, Diagnose der Mechanik.
+### 🌐 Simulation, Digital Twin & Reinforcement Learning
+- **NVIDIA Isaac Sim & Isaac Lab:** Aufbau digitaler Zwillinge (USD/URDF) von Arbeitszellen, Förderbändern und Robotermodellen.
+- **RL-Training (PPO / `rsl_rl`):** Training, Parameter-Tuning und Auswertung von Policies in der Simulation für Balance, Gehen mit Traglast und Greifbewegungen.
+- **Sim-to-Real-Abgleich:** Gemeinsame Python-/ROS-2-Pipeline für Simulation und echten Roboter sowie Messung realer Gelenk-Verzögerungen (Latenzen), um das Simulationsmodell realistischer einzustellen.
 
-### 🌐 Simulation & Digital Twins
-- **Isaac Sim 5.x / Isaac Lab:** Szenenaufbau in USD, Artikulationen, Antriebe (Drives), Kollisionsgeometrie, Masseneigenschaften.
-- **Sim ↔ Real mit einer Codebasis:** Dieselbe Teleop- und IK-Pipeline steuert die Simulation oder den echten Roboter.
-- **Modellpflege:** Konsistenz zwischen URDF, Xacro, USD und MJCF, Vergleich von Hersteller-Modellen per Vorwärtskinematik.
-
-### 🧠 Robot Learning
-- **Demo-Recording-Pipeline:** Bilder, Gelenkzustände, Gelenkmomente, Kraft-Momenten-Daten und kommandierte Aktionen werden synchron aufgezeichnet.
-- **Datensatz-Qualitätschecks und Export ins LeRobot-Format** (Behavior Cloning / ACT).
-- **Ehrliches Learning:** Eine bildbasierte Policy wurde instabil, sobald sich Licht und Hintergrund änderten. Die Konsequenz war eine Architektur mit messbarer, austauschbarer Vision-Komponente.
-
-### 🔧 Systemintegration & Betrieb
-- **ROS 2 auf mehreren Rechnern:** DDS/QoS, Docker-Container, Brücken zwischen den Rechnern.
-- **Diagnose an echter Hardware:** EtherCAT-/Servo-Fehler, Energie und Laden, Sensor-Bias.
-- **Sicherheitskonzept:** Klare Trennung zwischen Planung durch Software und Ausführung durch den Operator.
+### 👁️ Kameras & Objekterkennung
+- **Vision-Integration:** Einbindung von YOLO / YOLO-World und SAM 2 in Docker-Containern zur Erkennung von Kisten und Produkten im Kamerabild.
+- **Praxiserkenntnis:** Da rein bildbasierte End-to-End-Policies bei wechselndem Licht schnell instabil wurden, setze ich bei realen Greifabläufen lieber auf nachvollziehbare, explizit überprüfbare Zwischenschritte.
 
 ---
 
-## 🚀 Ausgewählte Projekte (nicht-proprietäre Darstellung)
+## 🚀 Ausgewählte Repositories & Prototypen
 
-| Projekt | Inhalt |
+| Projekt | Kurzbeschreibung |
 |---|---|
-| **VR Teleop Pro** | Quest 3 → Unity → ROS 2 → Dual-Arm-Streaming-IK → Roboter; Stereo-Video zurück ins Headset |
-| **Teleop Twin** | Eine Pipeline, zwei Ziele: Isaac Sim oder echter Roboter, umschaltbar per Kommando |
-| **Bin-Picking Twin** | Arbeitszelle mit Kiste als USD-Digital-Twin, Erreichbarkeitsanalyse, Grundlage für RL/IL |
-| **Shelf Picking** | Perception-gestütztes Greifen aus dem Regal mit erklärbarem Greifmodell |
-| **Training Studio** | Web-Oberfläche für Aufnahme, Prüfung und Verwaltung von Demonstrationen |
+| **VR Teleop Pro** | Quest 3 → Unity → ROS 2 → Python-IK-Ansteuerung auf der realen Hardware |
+| **Teleop Twin** | Umschaltbare Steuerungspipeline zum Testen in Isaac Sim oder am echten System |
+| **Bin-Picking Twin** | Virtuelle Arbeits- und Versandzelle in Isaac Lab für RL-Experimente (Balance, Gehen, Greifen) |
+| **Order Terminal** | Kiosk- und Steuerungs-Interface zur Auslösung validierter Pick-Abläufe |
 
 ---
 
-## 💡 Was ich aus der Praxis mitnehme
+## 🛠️ Tech-Stack
 
-- **Singularitäten verhindern statt auflösen:** Ein gestreckter 7-DOF-Arm kommt allein nicht mehr zurück.
-- **Erst die Eingangsdaten prüfen, dann den Solver tunen:** Asymmetrien steckten fast immer in den Zielen, nicht in der IK.
-- **„Sollte funktionieren“ ist kein Ergebnis:** Offline reproduzieren, Messwerte mit Datum festhalten.
-- **Erklärbare Modelle schlagen Black Boxes,** wenn Licht und Umgebung nicht kontrollierbar sind.
-
----
-
-## 🛠️ Stack
-
-`Python` `C++` `C#` `ROS 2` `Linux` `Docker` `Git`
-`Isaac Sim` `Isaac Lab` `USD` `Unity` `Pinocchio` `MoveIt 2` `MuJoCo`
-`OpenCV` `YOLOv8` `PyTorch` `LeRobot` `NumPy` `SciPy`
-`Meta Quest 3 / XR` `Motion Capture` `Embedded / MCU`
-
----
-
-## 🎯 Interessen
-
-Teleoperation & Shared Autonomy · Humanoide Roboter & Locomotion · Digital Twins ·
-Perception & Sensorfusion · Mensch-Roboter-Interaktion · Robot Learning · robuste Robotik-Architekturen
+`Python` `ROS 2 (Humble / rclpy)` `NVIDIA Isaac Sim` `NVIDIA Isaac Lab` `Pinocchio`
+`Unity (C# / Quest 3)` `Docker` `Linux` `Git` `SQL (MS SQL / IBM Db2)` `Bash / PowerShell`
+`PyTorch` `NumPy` `YOLO` `URDF / USD` `MoveIt 2 (Basics)`
 
 ---
 
@@ -109,4 +70,4 @@ Perception & Sensorfusion · Mensch-Roboter-Interaktion · Robot Learning · rob
 - GitHub: [polskiesmaki](https://github.com/polskiesmaki)
 - E-Mail: dennis.glowacki@gmx.de
 
-> Alle Inhalte sind bewusst allgemein gehalten. Es werden keine vertraulichen Produkt-, Kunden- oder Firmendaten veröffentlicht.
+> *Hinweis: Alle Beschreibungen sind allgemein gehalten und enthalten keine vertraulichen Unternehmens- oder Projektdaten.*
