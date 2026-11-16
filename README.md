@@ -32,7 +32,7 @@ Ich komme aus der praktischen Logistik- und Materialflussautomatisierung und arb
 - **Sichere Ausführung auf der Hardware:** Offline-Vorabprüfung von Pfaden, schrittweise Verifikation der Gelenkpositionen und klare Trennung zwischen Software-Freigabe und physischem Not-Halt.
 
 ### 📦 Pick-and-Place & Logistik-Use-Cases
-- **Regal-Picking auf realer Hardware:** Durchgängiger Ablauf von der Zielvorgabe über kollisionsgeprüfte Waypoints bis zum Greifen und Ablegen – Schritt für Schritt von ~147 s auf ~56 s Zykluszeit optimiert.
+- **Regal-Picking auf realer Hardware:** Durchgängiger Ablauf von der Zielvorgabe über kollisionsgeprüfte Waypoints bis zum Greifen und Ablegen.
 - **Kisten- & Förderband-Szenarien (Sim):** Aufbau virtueller Versandanlagen- und Bin-Picking-Szenarien zur Erprobung von Greif- und Hebevorgängen.
 
 ### 🌐 Simulation, Digital Twin & Reinforcement Learning
