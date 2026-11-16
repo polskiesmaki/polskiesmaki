@@ -41,8 +41,8 @@ Ich komme aus der praktischen Logistik- und Materialflussautomatisierung und arb
 - **Sim-to-Real-Abgleich:** Gemeinsame Python-/ROS-2-Pipeline für Simulation und echten Roboter sowie Messung realer Gelenk-Verzögerungen (Latenzen), um das Simulationsmodell realistischer einzustellen.
 
 ### 👁️ Kameras & Objekterkennung
-- **Vision-Integration:** Einbindung von YOLO / YOLO-World und SAM 2 in Docker-Containern zur Erkennung von Kisten und Produkten im Kamerabild.
-- **Praxiserkenntnis:** Da rein bildbasierte End-to-End-Policies bei wechselndem Licht schnell instabil wurden, setze ich bei realen Greifabläufen lieber auf nachvollziehbare, explizit überprüfbare Zwischenschritte.
+- **Objekterkennung & Produktunterscheidung (YOLO + DINOv3):** Kombination aus YOLO / YOLO-World zur Lokalisierung und DINOv3-Embeddings zur feingranularen Produktunterscheidung (z. B. zuverlässige Trennung optisch ähnlicher Getränke wie Wasser und Apfelschorle beim Regal-Pick).
+- **Praxiserkenntnis:** Da rein bildbasierte End-to-End-Policies bei wechselndem Licht schnell instabil wurden, setze ich bei realen Greifabläufen auf diese modulare Vision-Pipeline mit explizit überprüfbaren Greifpunkten.
 
 ---
 
@@ -61,7 +61,7 @@ Ich komme aus der praktischen Logistik- und Materialflussautomatisierung und arb
 
 `Python` `ROS 2 (Humble / rclpy)` `NVIDIA Isaac Sim` `NVIDIA Isaac Lab` `Pinocchio`
 `Unity (C# / Quest 3)` `Docker` `Linux` `Git` `SQL (MS SQL / IBM Db2)` `Bash / PowerShell`
-`PyTorch` `NumPy` `YOLO` `URDF / USD` `MoveIt 2 (Basics)`
+`PyTorch` `NumPy` `YOLO` `DINOv3` `URDF / USD` `MoveIt 2 (Basics)`
 
 ---
 
